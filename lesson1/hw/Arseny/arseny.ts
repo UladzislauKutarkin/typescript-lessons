@@ -1,13 +1,15 @@
+type IAdress = {
+  city: string;
+  street: string;
+  house: number | string;
+  flat: number;
+};
+
 type IObj = {
   name: string;
   age: number | null;
-  address: {
-    city: string;
-    street: string;
-    house: number | string;
-    flat: number;
-  };
-  orders: [[number, number], [number, number]];
+  address: IAdress;
+  orders: [number, number][];
   getAddress(): string;
 };
 
