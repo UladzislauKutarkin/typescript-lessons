@@ -1,8 +1,19 @@
 type IObj = {
-    //здесь ваша реализации типов
+    name: string,
+    age: number,
+    address: IAddress,
+    orders: [number,number][],
+    getAddress: ()=>string
 }
 
-const obj={
+type IAddress = {
+    city: string,
+    street: string,
+    house: number,
+    flat: number,
+}
+
+const obj : IObj={
     name: 'Anna',
     age:37,
     address: {
