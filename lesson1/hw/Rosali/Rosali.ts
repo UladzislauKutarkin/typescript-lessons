@@ -1,14 +1,16 @@
+type IAddress = {
+    city: string,
+    street: string,
+    house: number | string,
+    flat: number,
+}
+
 type IObj = {
     name: string,
     age: null | number,
-    address: {
-        city: string,
-        street: string,
-        house: number | string,
-        flat: number,
-    },
-
+    address: IAddress,
     orders: [number, number][]
+    getAddress: () => string,
 }
 
 const obj={
